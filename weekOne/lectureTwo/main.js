@@ -52,27 +52,27 @@ console.log(sayHello);
 // console.log(street, city);
 
 // Array Destructuring
-const todos = [
-    {
-        id: 1,
-        text: 'Take out trash',
-        isCompleted: true
-    },
-    {
-        id: 2,
-        text: 'Meeting with boss',
-        isCompleted: true
-    },
-    {
-        id: 3,
-        text: 'Dentist appt',
-        isCompleted: false
-    }
-];
+// const todos = [
+//     {
+//         id: 1,
+//         text: 'Take out trash',
+//         isCompleted: true
+//     },
+//     {
+//         id: 2,
+//         text: 'Meeting with boss',
+//         isCompleted: true
+//     },
+//     {
+//         id: 3,
+//         text: 'Dentist appt',
+//         isCompleted: false
+//     }
+// ];
 
-const [unicorn ] = todos;
-console.log(unicorn);
-console.log(todos)
+// const [unicorn ] = todos;
+// console.log(unicorn);
+// console.log(todos)
 
 // // Desctructuring with function
 // function getProfile() {
@@ -135,4 +135,13 @@ console.log(todos)
 // console.log(name, rest);
 
 
+// let firstName = "Will";
 
+// function someFunction() {
+//     let firstName = "john";
+//     return 5;
+//     console.log(firstName);
+// }
+// firstName = "Gray";
+// console.log(someFunction());
+// console.log(firstName);
