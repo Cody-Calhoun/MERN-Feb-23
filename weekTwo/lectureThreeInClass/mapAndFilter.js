@@ -84,3 +84,7 @@
 // var nePlayers = players.filter(function(player) {
 //     return player.team === 'NE';
 //     });
+
+
+// tom_brady = {name: 'Tom Brady', position: 'QB', team: 'TB'}
+// console.log(tom_brady['name'])
