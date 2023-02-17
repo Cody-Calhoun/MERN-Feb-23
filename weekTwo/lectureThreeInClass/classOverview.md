@@ -4,6 +4,7 @@
 ## Housekeeping 🧹
 - Discussion Questions Due Sunday, Feb 19th by 11:59 pm PST
 - Core Assignments: Putting it Together, Hook Forms, More Forms
+- Today's Class Code starting point
 
 
 ## Form walk-through and reformatting

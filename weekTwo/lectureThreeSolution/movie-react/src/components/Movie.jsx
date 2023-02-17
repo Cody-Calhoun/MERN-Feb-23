@@ -53,7 +53,7 @@ const Movie = () => {
                     <div className="form-group">
                     {
                         //ternary operator
-                        movieTitle && movieTitle.length < 3 ? <p className="text-danger">Title must be at least 3 characters</p> : null
+                        movies.movieTitle && movies.movieTitle.length < 3 ? <p className="text-danger">Title must be at least 3 characters</p> : null
                     }
                         <label htmlFor="" className="form-label">Movie Title:</label>
                         <input type="text" name="movieTitle" className="form-control" onChange={onChangeHandler} value={movies.movieTitle} />
@@ -61,7 +61,7 @@ const Movie = () => {
                     <div className="form-group">
                     {
                         //ternary operator
-                        genre && genre.length < 3 ? <p className="text-danger">Genre must be at least 3 characters</p> : null
+                        movies.genre && movies.genre.length < 3 ? <p className="text-danger">Genre must be at least 3 characters</p> : null
                     }
                         <label htmlFor="" className="form-label"> Genre: </label>
                         <input type="text" name="genre" className="form-control" onChange={onChangeHandler} value={movies.genre}/>
@@ -70,7 +70,7 @@ const Movie = () => {
                     <div className="form-group">
                     {
                         //ternary operator
-                        releaseYear && releaseYear < 1900 ? <p className="text-danger">Release year must be after 1900</p> : null
+                        movies.releaseYear && movies.releaseYear < 1900 ? <p className="text-danger">Release year must be after 1900</p> : null
                     }
                         <label htmlFor="" className="form-label">Release Year:</label>
                         <input type="number" name="releaseYear" className="form-control" onChange={onChangeHandler} value={movies.releaseYear}/>
@@ -78,12 +78,12 @@ const Movie = () => {
                     <div className="form-group">
                     {
                         //ternary operator
-                        movieTitle && ticketsSold < 3 ? <p className="text-danger">No way at least 3 people didn't see it. Must be more than 3.</p> : null
+                        movies.ticketsSold && movies.ticketsSold < 3 ? <p className="text-danger">No way at least 3 people didn't see it. Must be more than 3.</p> : null
                     }
                         <label htmlFor="" className="form-label">Tickets Sold:</label>
                         <input type="number" name="ticketsSold" className="form-control" onChange={onChangeHandler} value={movies.ticketsSold}/>
                     </div>
-                    <button className="btn btn-primary">
+                    <button className="btn btn-primary mt-3">
                         Add Movie
                     </button>
                 </form>
