@@ -28,13 +28,24 @@
 //     return results;
 // }
 
-//Map Example
-// var numbers = [1, 2, 3, 4, 5, 6, 7];
-// var sum = 0;
-// numbers.map(function(number) {
-//     return number * 2;
+// write a fucntion that takes an array of numbers and returns a new array with each number doubled
+
+// function someFunction(numbers){
+//     return numbers
 //     });
-// console.log(numbers); // [2, 4, 6, 8, 10, 12, 14]
+
+// someFunction([1, 2, 3, 4, 5, 6, 7])
+
+
+
+//Map Example
+var numbers = [ 2,1, 3, 4, 5, 6, 7];
+const doubled = numbers.map((number, index, array) => {
+    console.log(`number: ${number}, index: ${index}, array: ${array}`)
+    return number * 2;
+    });
+console.log(numbers);
+console.log(doubled);
 
 
 

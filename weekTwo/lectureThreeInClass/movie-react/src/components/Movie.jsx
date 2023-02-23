@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import Display from './Display'
 
 const Movie = () => {
 
@@ -100,12 +101,7 @@ const Movie = () => {
                     {
                         movieList.map((movie, idx) => (
                                 <div className="card" key={idx}>
-                                    <div className="card-body">
-                                        <h3 className="card-title">{movie.movieTitle}</h3>
-                                        <p className="card-text">Genre: {movie.genre}</p>
-                                        <p className="card-text">Release Year: {movie.releaseYear}</p>
-                                        <p className="card-text">Tickets Sold: {movie.ticketsSold}</p>
-                                    </div>
+                                    <Display movieTitle = {movie.movieTitle} genre={movie.genre} releaseYear={movie.releaseYear} ticketsSold={movie.ticketsSold}/>
                                 </div>
                             )
                         )
