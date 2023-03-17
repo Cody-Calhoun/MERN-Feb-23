@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 import axios from 'axios'
+import {useNavigate} from 'react-router-dom'
+
 
 const PlayerForm = () => {
     const [player, setPlayer] = useState({
@@ -7,6 +9,8 @@ const PlayerForm = () => {
         preferredPosition: ""
     })
     const [errors, setErrors] = useState({})
+
+    const navigate = useNavigate()
 
     const onChangeHandler = (e) => {
         setPlayer({
@@ -38,6 +42,8 @@ const PlayerForm = () => {
                 preferredPosition: "Preferred Position must be at least 2 characters"
             })
         }
+        navigate("/api/players")
+
     }
         // axios.post('http://localhost:8000/api/players', {
         //     name: e.target.name.value,
@@ -45,6 +51,7 @@ const PlayerForm = () => {
         // })
   return (
     <div>
+
         <h1>Add Player</h1>
         {errors.name ? <p className="text-danger">{errors.name}</p> : ""}
         <form action="" className="col-md-6 mx-auto" onSubmit={handleSubmit}>

@@ -2,7 +2,12 @@ import logo from './logo.svg';
 import axios from 'axios';
 import './App.css';
 import { useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import PlayerForm from './components/PlayerForm';
+import PlayerDashboard from './components/PlayerDashboard';
+import OnePlayer from './components/OnePlayer';
+import EditPlayer from './components/EditPlayer';
+import Navbar from './components/Navbar';
 
 function App() {
 
@@ -15,8 +20,13 @@ function App() {
 
   return (
     <div className="App">
-      <h1>In the main App</h1>
-      <PlayerForm/>
+      <Navbar/>
+      <Routes>
+        < Route element={<PlayerForm/>} path="api/players/create"/>
+        < Route element={<PlayerDashboard/>} path="api/players"/>
+        < Route element={<OnePlayer/>} path="api/players/:id"/>
+        < Route element={<EditPlayer/>} path="api/players/:id/edit"/>
+      </Routes>
   
     </div>
   );
